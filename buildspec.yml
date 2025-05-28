@@ -2,9 +2,9 @@ version: 0.2
 
 env:
   parameter-store:
-    DOCKER_REGISTRY_USERNAME: /myapp/docker-credentials/username
-    DOCKER_REGISTRY_PASSWORD: /myapp/docker-credentials/password
-    DOCKER_REGISTRY_URL: /myapp/docker-registry/url
+    DOCKER_REGISTRY_USERNAME: /python/docker-credentials/sonal1996
+    DOCKER_REGISTRY_PASSWORD: /python/docker-credentials/passward
+    DOCKER_REGISTRY_URL: /python/docker-registry/url
 phases:
   install:
     runtime-versions:
@@ -18,9 +18,9 @@ phases:
       - echo "Running tests..."
       - git clone https://github.com/sudo19/simple-python-app-demo
       - echo "Building Docker image..."
-      - echo "$DOCKER_REGISTRY_PASSWORD" | docker login -u "$DOCKER_REGISTRY_USERNAME" --password-stdin "$DOCKER_REGISTRY_URL"
-      - docker build -t "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/simple-python-app-demo:latest" simple-python-app-demo
-      - docker push "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/simple-python-app-demo:latest"
+      - echo "/python/docker-credentials/passward" | docker login -u "/python/docker-credentials/sonal1996" --password-stdin "/python/docker-registry/url"
+      - docker build -t "/python/docker-credentials/sonal1996/python/docker-credentials/sonal1996/simple-python-app-demo:latest" simple-python-app-demo
+      - docker push "/python/docker-registry/url/python/docker-credentials/sonal1996/simple-python-app-demo:latest"
   post_build:
     commands:
       - echo "Build completed successfully!"
