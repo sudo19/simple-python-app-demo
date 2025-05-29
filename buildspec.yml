@@ -2,8 +2,8 @@ version: 0.2
 
 env:
   parameter-store:
-    DOCKER_REGISTRY_USERNAME: /python/docker-credentials/sonal1996
-    DOCKER_REGISTRY_PASSWORD: /python/docker-credentials/sonal1996
+    DOCKER_REGISTRY_USERNAME: /python/docker-credentials/username
+    DOCKER_REGISTRY_PASSWORD: /python/docker-credentials/passward
     DOCKER_REGISTRY_URL: /python/docker-registry/url
 phases:
   install:
