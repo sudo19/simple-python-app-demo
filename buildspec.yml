@@ -18,9 +18,9 @@ phases:
       - echo "Running tests..."
       - git clone https://github.com/sudo19/simple-python-app-demo
       - echo "Building Docker image..."
-      - echo "/python/docker-credentials/passward" | docker login -u "/python/docker-credentials/sonal1996" --password-stdin "/python/docker-registry/url"
-      - docker build -t "/python/docker-registry/url/python/docker-credentials/sonal1996/simple-python-app-demo:latest" simple-python-app-demo
-      - docker push "/python/docker-registry/url/python/docker-credentials/sonal1996/simple-python-app-demo:latest"
+      - echo "/python/docker-credentials/passward" | docker login -u "/python/docker-credentials/username" --password-stdin "/python/docker-registry/url"
+      - docker build -t "/python/docker-registry/url//python/docker-credentials/usernamesimple-python-app-demo:latest" simple-python-app-demo
+      - docker push "/python/docker-registry/url/python/docker-credentials/username/simple-python-app-demo:latest"
   post_build:
     commands:
       - echo "Build completed successfully!"
