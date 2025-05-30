@@ -18,9 +18,9 @@ phases:
       - echo "Running tests..."
       - cd /simple-python-app-demo
       - echo "Building Docker image..."
-      - echo "/python/docker-credentials/password" | docker login -u "/python/docker-credentials/password" --password-stdin "/python/docker-registry/url"
-      - docker build -t "/python/docker-registry/url//python/docker-credentials/username/simple-python-app-demo:latest" simple-python-app-demo
-      - docker push "docker.io/python/docker-credentials/username/simple-python-app-demo:latest"
+      - echo /python/docker-credentials/password | docker login -u /python/docker-credentials/password --password-stdin /python/docker-registry/url
+      - docker build -t /python/docker-registry/url/python/docker-credentials/username/simple-python-app-demo:latest.
+      - docker push docker.io/python/docker-credentials/username/simple-python-app-demo:latest
   post_build:
     commands:
       - echo "Build completed successfully!"
